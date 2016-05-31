@@ -6,7 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 
 public class MyksIT {
 
@@ -15,16 +17,16 @@ public class MyksIT {
 	@Before
 	public void setUp() {
 
-		driver = new FirefoxDriver();
+		driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		
 	}
 
 	@Test
 	public void HelloWord() {
 
-		driver.navigate().to("http://localhost:9090/treina/produto/cadastro");
+		driver.navigate().to("http://localhost:9090/treina");
 
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
@@ -34,6 +36,6 @@ public class MyksIT {
 	public void tearDown() {
 		
 		driver.quit();
-
+			
 	}
 }
