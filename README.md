@@ -1,3 +1,3 @@
 # vraptor_selenium
 
-Estrutura de projeto Vraptor 3 com suporte para testes de integração selenium webDriver. 
+Estrutura de projeto utilizando Vraptor 3 como framework MVC, com suporte para testes de integração selenium Webdriver. 
